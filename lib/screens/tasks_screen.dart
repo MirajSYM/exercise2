@@ -39,6 +39,11 @@ class _TaskListScreenState extends State<TaskListScreen> {
                     !widget._todoData.items[index].completed;
               });
             },
+            onLongPress: () {
+              setState(() {
+                widget._todoData.items.removeAt(index);
+              });
+            },
           ),
         ),
         floatingActionButton: Row(
