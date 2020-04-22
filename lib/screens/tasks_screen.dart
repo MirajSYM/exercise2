@@ -39,7 +39,7 @@ class _TaskListScreenState extends State<TaskListScreen> {
           children: <Widget>[
             FloatingActionButton.extended(
               heroTag: null,
-              onPressed: null,
+              onPressed: () => Navigator.of(context).pop(widget._todoData),
               label: Text('Update'),
               icon: Icon(Icons.check_circle),
             ),
