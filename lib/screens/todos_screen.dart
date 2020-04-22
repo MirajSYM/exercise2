@@ -39,7 +39,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
         itemBuilder: (context, index) => ListTile(
           title: Text(widget._data[index].title),
           subtitle:
-              Text('The List has ${widget._data[index].items.length} tasks'),
+              Text('The List has ${widget._data[index].items.length} task'),
           trailing: CircleAvatar(
             child: Text(
               widget._data[index].progress.round().toString(),
