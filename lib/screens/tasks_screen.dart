@@ -45,7 +45,7 @@ class _TaskListScreenState extends State<TaskListScreen> {
             ),
             FloatingActionButton.extended(
               heroTag: null,
-              onPressed: null,
+              onPressed: () => Navigator.of(context).pop(null),
               label: Text('Cancel'),
               icon: Icon(Icons.cancel),
             ),
