@@ -27,12 +27,19 @@ class _TaskListScreenState extends State<TaskListScreen> {
             color: Colors.blueGrey,
           ),
           itemBuilder: (context, index) => ListTile(
-              title: Text(
-            'Deliverable #${index + 1}: ${widget._todoData.items[index].title}',
-            style: (widget._todoData.items[index].completed)
-                ? TextStyle(decoration: TextDecoration.lineThrough)
-                : TextStyle(decoration: TextDecoration.none),
-          )),
+            title: Text(
+              'Deliverable #${index + 1}: ${widget._todoData.items[index].title}',
+              style: (widget._todoData.items[index].completed)
+                  ? TextStyle(decoration: TextDecoration.lineThrough)
+                  : TextStyle(decoration: TextDecoration.none),
+            ),
+            onTap: () {
+              setState(() {
+                widget._todoData.items[index].completed =
+                    !widget._todoData.items[index].completed;
+              });
+            },
+          ),
         ),
         floatingActionButton: Row(
           mainAxisAlignment: MainAxisAlignment.end,
